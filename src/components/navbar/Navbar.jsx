@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-white py-2 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-pink-600">
@@ -39,7 +39,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/login"
+              href='/login'
               //className="btn btn-ghost bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition"
               className="btn-login"
             >
@@ -85,8 +85,6 @@ export default function Navbar() {
               <Link
                 href="/login"
                 onClick={() => setOpen(false)}
-                //className="btn btn-ghost bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition"
-              
                 className="btn-login-mobile"
               >
                 Login

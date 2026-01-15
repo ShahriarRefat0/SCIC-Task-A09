@@ -5,6 +5,11 @@ import Hero from "@/components/landing/Hero";
 import WhyChoose from "@/components/landing/WhyChoose";
 import { useState } from "react";
 import CakeDetailsModal from "./cakes/[id]/CakeDetails";
+import CategoriesSection from "@/components/landing/Category";
+import Category from "@/components/landing/Category";
+import Testimonials from "@/components/landing/Testimonials";
+import CTA from "@/components/landing/CTA";
+import HowItWorks from "@/components/landing/HowItWorks";
 
 export default function Home() {
 
@@ -30,6 +35,19 @@ export default function Home() {
       </section>
       <section>
         <WhyChoose></WhyChoose>
+      </section>
+      <section>
+        <Category></Category>
+      </section>
+      <section>
+        <Testimonials></Testimonials>
+      </section>
+      <section>
+        <CTA></CTA>
+      </section>
+
+      <section>
+        <HowItWorks></HowItWorks>
       </section>
 
 

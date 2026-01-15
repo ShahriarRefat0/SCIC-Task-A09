@@ -57,11 +57,13 @@ export default function CakeCard({
 
         {/* Buttons */}
         <div className="mt-2 flex items-start gap-3">
-          <button className="bg-[#EC4899] p-3 rounded-xl cursor-pinter  hover:border-[#EC4899] border hover:bg-white hover:text-[#EC4899] transition">
+          <button
+            
+            className="bg-[#EC4899] cursor-pointer p-3 rounded-xl cursor-pinter  hover:border-[#EC4899] border hover:bg-white hover:text-[#EC4899] transition">
             <HiEye  size={20}/>
           </button>
 
-          <button className="bg-[#EC4899] p-3 rounded-xl cursor-pinter border hover:border-[#EC4899] hover:bg-white hover:text-[#EC4899]">
+          <button className="bg-[#EC4899] cursor-pointer p-3 rounded-xl cursor-pinter border hover:border-[#EC4899] hover:bg-white hover:text-[#EC4899]">
             <MdShoppingBag  size={20}/>
           </button>
         </div>
