@@ -15,7 +15,7 @@ export default function Footer() {
           {/* 1. Brand & About */}
           <div className="space-y-6">
             <Link href="/" className="text-2xl font-bold text-pink-600">
-              Cake<span className="text-gray-800">SweetOshi</span>
+              Sweet<span className="text-gray-800">Oshi</span>
             </Link>
             <p className="text-gray-600 leading-relaxed">
               Baking happiness since 2010. We specialize in custom cakes for your most special celebrations with fresh ingredients and love.
