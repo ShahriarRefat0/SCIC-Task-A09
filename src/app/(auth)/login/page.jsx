@@ -1,11 +1,53 @@
 "use client";
 
+import swap from "daisyui/components/swap";
 import { motion } from "framer-motion";
 import { Mail, Lock, ArrowRight, Github, Chrome } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
+  const { setIsAuthenticated } = useAuth();
+
+  const handleSignin = async (e) => {
+    e.preventDefault();
+    console.log("Sign In clicked");
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    })
+
+    if (res.ok) {
+      setIsAuthenticated(true);
+      toast.success("✅ Login successful! Redirecting to cakes...", {
+        position: "top-right",
+        autoClose: 2000,
+      });
+      setTimeout(() => {
+        router.push("/cakes");
+        router.refresh();
+      }, 1000);
+    } else {
+      const data = await res.json();
+      toast.error(`❌ ${data.message}`, {
+        position: "top-right",
+        autoClose: 3000,
+      });
+    }
+
+  }
+
+
   return (
     <div className="min-h-screen bg-[#FFF5F7] flex items-center justify-center p-6 relative overflow-hidden">
 
@@ -37,13 +79,16 @@ export default function Login() {
           </div>
 
           {/* Form */}
-          <form className="space-y-5">
+          <form
+            onSubmit={handleSignin}
+            className="space-y-5">
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700 ml-1">Email Address</label>
               <div className="relative group">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-pink-500 transition-colors" size={20} />
                 <input
                   type="email"
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@example.com"
                   className="w-full bg-gray-50/50 border border-gray-100 rounded-2xl py-4 pl-12 pr-4 outline-none focus:border-pink-300 focus:bg-white transition-all shadow-sm"
                 />
@@ -59,6 +104,8 @@ export default function Login() {
                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-pink-500 transition-colors" size={20} />
                 <input
                   type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+
                   placeholder="••••••••"
                   className="w-full bg-gray-50/50 border border-gray-100 rounded-2xl py-4 pl-12 pr-4 outline-none focus:border-pink-300 focus:bg-white transition-all shadow-sm"
                 />
@@ -66,11 +113,13 @@ export default function Login() {
             </div>
 
             <motion.button
+
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              type="submit"
               className="w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold cursor-pointer py-4 rounded-2xl shadow-lg shadow-pink-200 flex items-center justify-center gap-2 mt-4 hover:opacity-90 transition-opacity"
             >
-              Sign In <ArrowRight size={20} />
+              Sign In
             </motion.button>
           </form>
 
@@ -89,7 +138,7 @@ export default function Login() {
 
 
           <p className="text-center mt-8 text-gray-500 text-sm">
-            Don't have an account? <Link href="/signup" className="text-pink-600 font-bold hover:underline">Create Account</Link>
+            Don&apos;t have an account? <Link href="/signup" className="text-pink-600 font-bold hover:underline">Create Account</Link>
           </p>
         </div>
       </motion.div>

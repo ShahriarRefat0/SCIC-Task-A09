@@ -6,45 +6,54 @@ import CakeCard from "@/components/itemCard/CakeCard";
 export default function FeaturedCakes({ onQuickView }) {
   const featuredCakes = [
     {
-      id: 1,
-      name: "Chocolate Truffle Cake",
-      price: 1200,
-      offerPrice: 950,
-      discount: 20,
-      image:
-        "https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=800&q=80",
-      description: "Rich chocolate cake with creamy truffle frosting.",
+      "id": 1,
+      "name": "Chocolate Truffle Cake",
+      "price": 1200,
+      "offerPrice": 950,
+      "discount": 20,
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
+      "description": "Rich chocolate cake with creamy truffle frosting and chocolate shavings.",
+      "category": "Birthday",
+      "weight": "1kg",
+      "servings": "8-10 people"
     },
     {
-      id: 2,
-      name: "Strawberry Cream Cake",
-      price: 1000,
-      offerPrice: 850,
-      discount: 15,
-      image:
-        "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?auto=format&fit=crop&w=800&q=80",
-      description: "Fresh strawberry layers with smooth cream.",
+      "id": 2,
+      "name": "Red Velvet Delight",
+      "price": 1500,
+      "offerPrice": 1200,
+      "discount": 20,
+      "image": "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=800&q=80",
+      "description": "Classic red velvet cake with cream cheese frosting and a hint of cocoa.",
+      "category": "Birthday",
+      "weight": "1kg",
+      "servings": "8-10 people"
+    },
+    
+    {
+      "id": 4,
+      "name": "Strawberry Shortcake",
+      "price": 1300,
+      "offerPrice": 975,
+      "discount": 25,
+      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80",
+      "description": "Fresh strawberries layered with whipped cream and vanilla sponge.",
+      "category": "Birthday",
+      "weight": "1kg",
+      "servings": "8-10 people"
     },
     {
-      id: 3,
-      name: "Vanilla Celebration Cake",
-      price: 900,
-      offerPrice: 750,
-      discount: 17,
-      image:
-        "https://images.unsplash.com/photo-1599785209707-28c9c0a0e7c3?auto=format&fit=crop&w=800&q=80",
-      description: "Classic vanilla cake for every celebration.",
-    },
-    {
-      id: 4,
-      name: "Red Velvet Cake",
-      price: 1300,
-      offerPrice: 1100,
-      discount: 15,
-      image:
-        "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80",
-      description: "Soft red velvet with cream cheese frosting.",
-    },
+      "id": 5,
+      "name": "Black Forest Cake",
+      "price": 1400,
+      "offerPrice": 1120,
+      "discount": 20,
+      "image": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=800&q=80",
+      "description": "Classic Black Forest with chocolate sponge, cherries, and whipped cream.",
+      "category": "Birthday",
+      "weight": "1kg",
+      "servings": "8-10 people"
+    },   
   ];
 
   return (

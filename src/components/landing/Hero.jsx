@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <div className="backdrop-blur-xl bg-white/30 border border-white/40 p-4 rounded-3xl shadow-2xl max-w-sm">
             <Image
-              src="https://images.unsplash.com/photo-1542826438-8b2e4c47b43f?auto=format&fit=crop&w=600&q=80"
+              src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?q=80&w=636&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Bestseller Cake"
               width={400}
               height={450}
