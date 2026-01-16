@@ -8,12 +8,7 @@ import { HiEye } from "react-icons/hi";
 // import eye from '../../../public/Eye.gif';
 // import shop from '../../../public/Cart V5.svg'
 export default function CakeCard({
-  image,
-  name,
-  price,
-  offerPrice,
-  discount,
-  id
+  cake
 }) {
   return (
     <motion.div
@@ -25,14 +20,14 @@ export default function CakeCard({
     >
       {/* Discount Badge */}
       <div className="absolute top-4 right-4 z-10 bg-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-        {discount}% OFF
+        {cake?.discount}% OFF
       </div>
 
       {/* Image */}
       <div className="relative h-56 overflow-hidden">
         <Image
-          src={image}
-          alt={name}
+          src={cake?.image}
+          alt={cake?.name}
           fill
           unoptimized
           className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -42,26 +37,26 @@ export default function CakeCard({
       {/* Content */}
       <div className="p-5">
         <h3 className="text-lg font-semibold text-gray-800 truncate">
-          {name}
+          {cake?.name}
         </h3>
 
         {/* Price */}
         <div className="mt-2 flex items-center gap-3">
           <span className="text-xl font-bold text-pink-600">
-            ৳{offerPrice}
+            ৳{cake?.offerPrice}
           </span>
           <span className="text-sm text-gray-400 line-through">
-            ৳{price}
+            ৳{cake?.price}
           </span>
         </div>
 
         {/* Buttons */}
         <div className="mt-2 flex items-start gap-3">
-          <button
+          <Link href={`/cakes/${cake?.id}`}
             
             className="bg-[#EC4899] cursor-pointer p-3 rounded-xl cursor-pinter  hover:border-[#EC4899] border hover:bg-white hover:text-[#EC4899] transition">
             <HiEye  size={20}/>
-          </button>
+          </Link>
 
           <button className="bg-[#EC4899] cursor-pointer p-3 rounded-xl cursor-pinter border hover:border-[#EC4899] hover:bg-white hover:text-[#EC4899]">
             <MdShoppingBag  size={20}/>

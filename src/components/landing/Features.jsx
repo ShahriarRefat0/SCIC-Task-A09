@@ -77,8 +77,7 @@ export default function FeaturedCakes({ onQuickView }) {
               viewport={{ once: true }}
             >
               <CakeCard
-                {...cake}
-                onQuickView={() => onQuickView(cake)}
+                cake={cake}
               />
             </motion.div>
           ))}

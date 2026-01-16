@@ -3,18 +3,12 @@
 import Features from "@/components/landing/Features";
 import Hero from "@/components/landing/Hero";
 import WhyChoose from "@/components/landing/WhyChoose";
-import { useState } from "react";
-import CakeDetailsModal from "./cakes/[id]/CakeDetails";
-import CategoriesSection from "@/components/landing/Category";
 import Category from "@/components/landing/Category";
 import Testimonials from "@/components/landing/Testimonials";
 import CTA from "@/components/landing/CTA";
 import HowItWorks from "@/components/landing/HowItWorks";
 
 export default function Home() {
-
-  const [selectCake, setSelectCake] = useState(null);
-  const [open, setOpen] = useState(false);
 
 
   return (
@@ -23,15 +17,7 @@ export default function Home() {
         <Hero></Hero>
       </section>
       <section>
-        <Features onQuickView={(cake) => {
-          setSelectCake(cake);
-          setOpen(true);
-        }}></Features>
-        <CakeDetailsModal
-          cake={selectCake}
-          isOpen={open}
-          onClose={()=> setOpen(false)}
-        ></CakeDetailsModal>
+        <Features></Features>
       </section>
       <section>
         <WhyChoose></WhyChoose>
