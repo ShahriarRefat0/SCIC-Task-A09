@@ -250,7 +250,7 @@ export default function CakesPage() {
     <section className="bg-white ">
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-      <h2 className="text-3xl font-bold mb-8 text-gray-800">
+        <h2 className="text-3xl font-bold mb-8  text-gray-800">
         Our Popular Cakes
       </h2>
 
