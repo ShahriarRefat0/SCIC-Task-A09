@@ -9,7 +9,7 @@ A modern, feature-rich e-commerce web application for ordering custom cakes, bui
 
 ## 🌟 Live Demo
 
-- **Live Site:** [SweetCakes Demo](https://your-deployment-url.vercel.app)
+- **Live Site:** [SweetCakes Demo](https://scic-task-a09.vercel.app)
 - **GitHub Repository:** [https://github.com/ShahriarRefat0/SCIC-Task-A09.git](https://github.com/ShahriarRefat0/SCIC-Task-A09.git)
 
 ---
